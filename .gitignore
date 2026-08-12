@@ -1,0 +1,11 @@
+# Local / editor
+.claude/settings.local.json
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Env / secrets
+.env
+.env.*
+*.pem
+credentials.json

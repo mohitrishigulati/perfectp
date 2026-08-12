@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#FBF9F4;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  img{display:block;max-width:100%}
+  button,input,textarea,select{font-family:inherit}
+  ::selection{background:#E0231C;color:#fff}
+  @keyframes ppfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+</style>
+</helmet>
+
+<div data-pp-root style="font-family:'Hanken Grotesk',system-ui,sans-serif;color:#18140F;background:#FBF9F4;min-height:100vh">
+
+  <!-- ============ NAV ============ -->
+  <header data-pp-nav style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(251,249,244,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 #E6E0D4">
+    <div style="max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,52px);height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <a href="#" data-pp-goto="home" style="display:flex;align-items:center;gap:12px;text-decoration:none;flex:none">
+        <img src="assets/perfectplacer-logo.png" alt="Perfect Placer" style="height:54px;width:auto"/>
+      </a>
+      <nav style="display:flex;align-items:center;gap:clamp(14px,2vw,34px);flex-wrap:wrap;justify-content:flex-end">
+        <a href="#" data-pp-link="home" style="text-decoration:none;color:#18140F;font-size:14.5px;font-weight:500;letter-spacing:.01em;position:relative;padding:6px 0">Home<span data-ul style="position:absolute;left:0;bottom:0;height:1.5px;width:0;background:#E0231C;transition:width .35s ease"></span></a>
+        <a href="#" data-pp-link="about" style="text-decoration:none;color:#18140F;font-size:14.5px;font-weight:500;position:relative;padding:6px 0">About<span data-ul style="position:absolute;left:0;bottom:0;height:1.5px;width:0;background:#E0231C;transition:width .35s ease"></span></a>
+        <a href="#" data-pp-link="why" style="text-decoration:none;color:#18140F;font-size:14.5px;font-weight:500;position:relative;padding:6px 0">Why Us<span data-ul style="position:absolute;left:0;bottom:0;height:1.5px;width:0;background:#E0231C;transition:width .35s ease"></span></a>
+        <a href="#" data-pp-link="clients" style="text-decoration:none;color:#18140F;font-size:14.5px;font-weight:500;position:relative;padding:6px 0">Clients<span data-ul style="position:absolute;left:0;bottom:0;height:1.5px;width:0;background:#E0231C;transition:width .35s ease"></span></a>
+        <a href="#" data-pp-link="contact" style="text-decoration:none;color:#18140F;font-size:14.5px;font-weight:500;position:relative;padding:6px 0">Contact<span data-ul style="position:absolute;left:0;bottom:0;height:1.5px;width:0;background:#E0231C;transition:width .35s ease"></span></a>
+        <a href="#" data-pp-goto="contact" data-pp-settab="employer" style="text-decoration:none;background:#E0231C;color:#fff;font-size:14px;font-weight:600;padding:11px 20px;border-radius:2px;transition:background .3s ease,transform .3s ease" style-hover="background:#B81A14;transform:translateY(-1px)">Begin a Search</a>
+      </nav>
+    </div>
+  </header>
+
+  <div style="padding-top:74px">
+
+  <!-- ==================================================== HOME ==================================================== -->
+  <div data-pp-page="home" data-screen-label="Home" style="display:block">
+
+    <!-- HERO -->
+    <section style="max-width:1280px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(20px,4vw,52px) clamp(32px,4vw,56px)">
+      <div data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.6,.2,1),transform .9s cubic-bezier(.2,.6,.2,1)">
+        <div style="font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#E0231C;margin-bottom:26px">Executive Search &nbsp;·&nbsp; Est. 1992</div>
+        <h1 style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(44px,7.2vw,104px);line-height:0.98;letter-spacing:-0.02em;margin:0;max-width:15ch;color:#18140F">Empowering ambition.<br><span style="font-style:italic;font-weight:400">Connecting</span> talent.</h1>
+      </div>
+      <div data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.6,.2,1) .12s,transform .9s cubic-bezier(.2,.6,.2,1) .12s;margin-top:34px;display:flex;flex-wrap:wrap;gap:40px;align-items:flex-end;justify-content:space-between">
+        <p style="font-size:clamp(17px,1.5vw,21px);line-height:1.55;color:#5A5349;max-width:46ch;margin:0">For three decades, India's most demanding boardrooms have trusted us with a single, decisive question — <em style="font-style:italic;color:#18140F">who.</em> We find the one leader who changes the trajectory of a company.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a href="#" data-pp-goto="contact" data-pp-settab="employer" style="text-decoration:none;background:#18140F;color:#FBF9F4;font-size:15px;font-weight:600;padding:15px 28px;border-radius:2px;transition:background .3s,transform .3s" style-hover="background:#E0231C;transform:translateY(-2px)">Share a mandate</a>
+          <a href="#" data-pp-goto="contact" data-pp-settab="candidate" style="text-decoration:none;background:transparent;color:#18140F;font-size:15px;font-weight:600;padding:15px 28px;border:1px solid #C9C2B4;border-radius:2px;transition:border-color .3s,color .3s" style-hover="border-color:#18140F">Submit your résumé →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HERO IMAGE -->
+    <section data-reveal style="opacity:0;transform:translateY(22px);transition:opacity 1s ease .1s,transform 1s ease .1s;max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,52px) clamp(40px,5vw,72px)">
+      <image-slot id="pp-hero" style="width:100%;height:clamp(320px,46vw,620px);display:block" shape="rounded" radius="3" placeholder="Drop a hero image — a boardroom or leadership moment"></image-slot>
+    </section>
+
+    <!-- STAT STRIP -->
+    <section style="border-top:1px solid #E6E0D4;border-bottom:1px solid #E6E0D4;background:#F6F3EC">
+      <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease;max-width:1280px;margin:0 auto;padding:clamp(40px,5vw,68px) clamp(20px,4vw,52px);display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:clamp(28px,4vw,56px)">
+        <div style="border-top:2px solid #E0231C;padding-top:22px">
+          <p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(21px,2.1vw,28px);line-height:1.35;color:#18140F;margin:0;max-width:26ch">Over three decades of finding leaders across every business cycle India has seen.</p>
+        </div>
+        <div style="border-top:2px solid #E0231C;padding-top:22px">
+          <p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(21px,2.1vw,28px);line-height:1.35;color:#18140F;margin:0;max-width:26ch">Majority of our candidates continue to stay beyond the standard retention milestone.</p>
+        </div>
+        <div style="border-top:2px solid #E0231C;padding-top:22px">
+          <p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(21px,2.1vw,28px);line-height:1.35;color:#18140F;margin:0;max-width:26ch">Most of our clients have stayed with us for over a decade.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES TEASER -->
+    <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(20px,4vw,52px)">
+      <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease;display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between;margin-bottom:clamp(34px,4vw,56px)">
+        <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(30px,3.6vw,50px);line-height:1.05;letter-spacing:-0.015em;margin:0;max-width:18ch">What we do, we do for the few roles that matter most.</h2>
+        <a href="#" data-pp-goto="why" style="text-decoration:none;color:#18140F;font-weight:600;font-size:15px;border-bottom:1.5px solid #E0231C;padding-bottom:3px;white-space:nowrap">Why choose us →</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:#E6E0D4;border:1px solid #E6E0D4">
+        <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease;background:#FBF9F4;padding:clamp(28px,3vw,44px);transition:opacity .8s ease,transform .8s ease,background .4s ease" style-hover="background:#fff">
+          <div style="font-family:'Newsreader',serif;font-size:22px;color:#E0231C;margin-bottom:18px">01</div>
+          <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:25px;margin:0 0 12px">Executive Search</h3>
+          <p style="font-size:15px;line-height:1.6;color:#5A5349;margin:0">Result-oriented leaders for the pivotal, can't-get-it-wrong roles at the top of your organisation.</p>
+        </div>
+        <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .8s ease .07s,transform .8s ease .07s,background .4s ease;background:#FBF9F4;padding:clamp(28px,3vw,44px)" style-hover="background:#fff">
+          <div style="font-family:'Newsreader',serif;font-size:22px;color:#E0231C;margin-bottom:18px">02</div>
+          <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:25px;margin:0 0 12px">HR Consulting</h3>
+          <p style="font-size:15px;line-height:1.6;color:#5A5349;margin:0">The special, sensitive HR mandates that don't fit a template — handled by advisors who've seen them before.</p>
+        </div>
+        <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .8s ease .14s,transform .8s ease .14s,background .4s ease;background:#FBF9F4;padding:clamp(28px,3vw,44px)" style-hover="background:#fff">
+          <div style="font-family:'Newsreader',serif;font-size:22px;color:#E0231C;margin-bottom:18px">03</div>
+          <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:25px;margin:0 0 12px">Training &amp; Mentoring</h3>
+          <p style="font-size:15px;line-height:1.6;color:#5A5349;margin:0">Because the right hire is a beginning. We help leaders land, settle, and grow into the role.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENTS TEASER -->
+    <section style="background:#18140F;color:#FBF9F4">
+      <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease;max-width:1280px;margin:0 auto;padding:clamp(56px,6vw,96px) clamp(20px,4vw,52px)">
+        <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:flex-end;justify-content:space-between;margin-bottom:clamp(34px,4vw,52px)">
+          <div>
+            <div style="font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#E0231C;margin-bottom:16px">In good company</div>
+            <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(28px,3.4vw,48px);line-height:1.06;margin:0;max-width:20ch">Trusted by conglomerates, MNCs and the names that built modern India.</h2>
+          </div>
+          <a href="#" data-pp-goto="clients" style="text-decoration:none;color:#FBF9F4;font-weight:600;font-size:15px;border-bottom:1.5px solid #E0231C;padding-bottom:3px;white-space:nowrap">See our clients →</a>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.1)">
+          <div style="background:#18140F;display:flex;align-items:center;justify-content:center;padding:30px 22px"><img src="assets/logos/reliance.png" alt="Reliance" style="max-height:34px;max-width:120px;width:auto;filter:brightness(0) invert(1);opacity:.78"/></div>
+          <div style="background:#18140F;display:flex;align-items:center;justify-content:center;padding:30px 22px"><img src="assets/logos/honeywell.png" alt="Honeywell" style="max-height:26px;max-width:120px;width:auto;filter:brightness(0) invert(1);opacity:.78"/></div>
+          <div style="background:#18140F;display:flex;align-items:center;justify-content:center;padding:30px 22px"><img src="assets/logos/ibm.png" alt="IBM" style="max-height:30px;max-width:110px;width:auto;filter:brightness(0) invert(1);opacity:.78"/></div>
+          <div style="background:#18140F;display:flex;align-items:center;justify-content:center;padding:30px 22px"><img src="assets/logos/caterpillar.png" alt="Caterpillar" style="max-height:24px;max-width:130px;width:auto;filter:brightness(0) invert(1);opacity:.78"/></div>
+          <div style="background:#18140F;display:flex;align-items:center;justify-content:center;padding:30px 22px"><img src="assets/logos/novartis.png" alt="Novartis" style="max-height:34px;max-width:130px;width:auto;filter:brightness(0) invert(1);opacity:.78"/></div>
+          <div style="background:#18140F;display:flex;align-items:center;justify-content:center;padding:30px 22px"><img src="assets/logos/vedanta.png" alt="Vedanta" style="max-height:34px;max-width:120px;width:auto;filter:brightness(0) invert(1);opacity:.78"/></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ==================================================== ABOUT ==================================================== -->
+  <div data-pp-page="about" data-screen-label="About" style="display:none">
+    <section style="max-width:1280px;margin:0 auto;padding:clamp(48px,6vw,90px) clamp(20px,4vw,52px) clamp(30px,3vw,48px)">
+      <div data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease">
+        <div style="font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#E0231C;margin-bottom:24px">About Perfect Placer</div>
+        <h1 style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(36px,5.4vw,80px);line-height:1.0;letter-spacing:-0.02em;margin:0;max-width:17ch">Thirty years spent learning that the right person is <span style="font-style:italic">everything.</span></h1>
+      </div>
+    </section>
+
+    <section style="max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,52px) clamp(48px,5vw,80px)">
+      <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,5vw,72px);align-items:start">
+        <p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(20px,2vw,27px);line-height:1.5;color:#18140F;margin:0">A national presence built over three decades, with a track record across a wide span of industries — from India's largest conglomerates to the multinationals that came to grow here.</p>
+        <p style="font-size:16px;line-height:1.7;color:#5A5349;margin:0">We are, at heart, specialists. Our work concentrates where the stakes are highest: the recruitment of top, senior and middle-management professionals, and the challenging leadership roles that define a company's next decade. When the brief is hard, that is usually when our phone rings.</p>
+      </div>
+    </section>
+
+    <!-- IMAGE BAND -->
+    <section data-reveal style="opacity:0;transform:translateY(20px);transition:opacity 1s ease,transform 1s ease;max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,52px) clamp(56px,6vw,90px)">
+      <image-slot id="pp-about" style="width:100%;height:clamp(280px,38vw,500px);display:block" shape="rounded" radius="3" placeholder="Drop an image — your team, office, or a handshake"></image-slot>
+    </section>
+
+    <!-- WHAT WE DO -->
+    <section style="border-top:1px solid #E6E0D4;background:#F6F3EC">
+      <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,6vw,96px) clamp(20px,4vw,52px)">
+        <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease;font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#E0231C;margin-bottom:32px">Three disciplines, one obsession</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:clamp(28px,4vw,56px)">
+          <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease">
+            <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:27px;margin:0 0 14px;padding-top:22px;border-top:2px solid #18140F">Recruitment</h3>
+            <p style="font-size:15px;line-height:1.65;color:#5A5349;margin:0">Senior and critical hiring, led personally — not delegated to a database.</p>
+          </div>
+          <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .8s ease .08s,transform .8s ease .08s">
+            <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:27px;margin:0 0 14px;padding-top:22px;border-top:2px solid #18140F">HR Consulting</h3>
+            <p style="font-size:15px;line-height:1.65;color:#5A5349;margin:0">A committed panel of advisors for the HR needs that sit outside the org chart.</p>
+          </div>
+          <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .8s ease .16s,transform .8s ease .16s">
+            <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:27px;margin:0 0 14px;padding-top:22px;border-top:2px solid #18140F">Training &amp; Mentoring</h3>
+            <p style="font-size:15px;line-height:1.65;color:#5A5349;margin:0">Helping new leaders convert a strong start into a lasting tenure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS + INDUSTRIES -->
+    <section style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,110px) clamp(20px,4vw,52px)">
+      <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(36px,5vw,80px);align-items:center">
+        <div>
+          <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(28px,3.4vw,46px);line-height:1.08;margin:0 0 28px;max-width:16ch">We are measured by what happens after the offer letter.</h2>
+          <div style="display:grid;gap:26px">
+            <p style="border-top:2px solid #E0231C;padding-top:18px;font-size:16px;line-height:1.6;color:#5A5349;margin:0;max-width:38ch">Majority of our candidates continue to stay beyond the standard retention milestone.</p>
+            <p style="border-top:2px solid #E0231C;padding-top:18px;font-size:16px;line-height:1.6;color:#5A5349;margin:0;max-width:38ch">Most of our clients have stayed with us for over a decade.</p>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#8A8275;margin-bottom:20px">Leadership roles filled across</div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px">
+            <span style="border:1px solid #D8D2C5;border-radius:40px;padding:9px 18px;font-size:14.5px;font-weight:500">Manufacturing</span>
+            <span style="border:1px solid #D8D2C5;border-radius:40px;padding:9px 18px;font-size:14.5px;font-weight:500">BFSI</span>
+            <span style="border:1px solid #D8D2C5;border-radius:40px;padding:9px 18px;font-size:14.5px;font-weight:500">Retail</span>
+            <span style="border:1px solid #D8D2C5;border-radius:40px;padding:9px 18px;font-size:14.5px;font-weight:500">Telecom</span>
+            <span style="border:1px solid #D8D2C5;border-radius:40px;padding:9px 18px;font-size:14.5px;font-weight:500">Pharma</span>
+            <span style="border:1px solid #D8D2C5;border-radius:40px;padding:9px 18px;font-size:14.5px;font-weight:500">Healthcare</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================================================== WHY US ==================================================== -->
+  <div data-pp-page="why" data-screen-label="Why Us" style="display:none">
+    <section style="max-width:1280px;margin:0 auto;padding:clamp(48px,6vw,90px) clamp(20px,4vw,52px) clamp(34px,4vw,56px)">
+      <div data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease">
+        <div style="font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#E0231C;margin-bottom:24px">Why choose us</div>
+        <h1 style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(36px,5.2vw,78px);line-height:1.0;letter-spacing:-0.02em;margin:0;max-width:16ch">Anyone can send résumés. We send the <span style="font-style:italic">right one.</span></h1>
+        <p style="font-size:clamp(16px,1.4vw,19px);line-height:1.6;color:#5A5349;max-width:52ch;margin:28px 0 0">Eight reasons the discerning clients hand us their most difficult mandates — and keep coming back!</p>
+      </div>
+    </section>
+
+    <section style="max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,52px) clamp(64px,7vw,110px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:#E6E0D4;border:1px solid #E6E0D4">
+
+        <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease,background .4s ease;background:#FBF9F4;padding:clamp(30px,3vw,48px)" style-hover="background:#fff">
+          <div style="font-family:'Newsreader',serif;font-size:20px;color:#E0231C;margin-bottom:20px">01</div>
+          <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:26px;margin:0 0 14px">Executive Search</h3>
+          <p style="font-size:15px;line-height:1.65;color:#5A5349;margin:0">We are committed to finding result-oriented leaders for the pivotal roles in your organisation.</p>
+        </div>
+
+        <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .7s ease .05s,transform .7s ease .05s,background .4s ease;background:#FBF9F4;padding:clamp(30px,3vw,48px)" style-hover="background:#fff">
+          <div style="font-family:'Newsreader',serif;font-size:20px;color:#E0231C;margin-bottom:20px">02</div>
+          <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:26px;margin:0 0 14px">Network</h3>
+          <p style="font-size:15px;line-height:1.65;color:#5A5349;margin:0">We leverage our network and our head-hunting capabilities to find the right people for you — not the available ones.</p>
+        </div>
+
+        <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .7s ease .1s,transform .7s ease .1s,background .4s ease;background:#FBF9F4;padding:clamp(30px,3vw,48px)" style-hover="background:#fff">
+          <div style="font-family:'Newsreader',serif;font-size:20px;color:#E0231C;margin-bottom:20px">03</div>
+          <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:26px;margin:0 0 14px">Candidate Evaluation</h3>
+          <p style="font-size:15px;line-height:1.65;color:#5A5349;margin:0">We comprehensively assess so you can decide with confidence — weighed on domain knowledge, cultural fit and leadership style.</p>
+        </div>
+
+        <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease,background .4s ease;background:#FBF9F4;padding:clamp(30px,3vw,48px)" style-hover="background:#fff">
+          <div style="font-family:'Newsreader',serif;font-size:20px;color:#E0231C;margin-bottom:20px">04</div>
+          <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:26px;margin:0 0 14px">Partner-led Search</h3>
+          <p style="font-size:15px;line-height:1.65;color:#5A5349;margin:0">Our Managing Partners are your single point of contact throughout the engagement. No hand-offs, no juniors.</p>
+        </div>
+
+        <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .7s ease .05s,transform .7s ease .05s,background .4s ease;background:#FBF9F4;padding:clamp(30px,3vw,48px)" style-hover="background:#fff">
+          <div style="font-family:'Newsreader',serif;font-size:20px;color:#E0231C;margin-bottom:20px">05</div>
+          <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:26px;margin:0 0 14px">National Reach</h3>
+          <p style="font-size:15px;line-height:1.65;color:#5A5349;margin:0">Based in Delhi, Mumbai and Chennai, with collaborators in every major city. For pan-India searches, we draw on a national network.</p>
+        </div>
+
+        <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .7s ease .1s,transform .7s ease .1s,background .4s ease;background:#FBF9F4;padding:clamp(30px,3vw,48px)" style-hover="background:#fff">
+          <div style="font-family:'Newsreader',serif;font-size:20px;color:#E0231C;margin-bottom:20px">06</div>
+          <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:26px;margin:0 0 14px">Quality Shortlisting</h3>
+          <p style="font-size:15px;line-height:1.65;color:#5A5349;margin:0">We shortlist after extensive discussion and careful evaluation — so you never have to wade through a stack of résumés.</p>
+        </div>
+
+        <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease,background .4s ease;background:#FBF9F4;padding:clamp(30px,3vw,48px)" style-hover="background:#fff">
+          <div style="font-family:'Newsreader',serif;font-size:20px;color:#E0231C;margin-bottom:20px">07</div>
+          <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:26px;margin:0 0 14px">Confidentiality</h3>
+          <p style="font-size:15px;line-height:1.65;color:#5A5349;margin:0">We treat your requirements with discretion — especially for sensitive roles and mandates where word travels fast.</p>
+        </div>
+
+        <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .7s ease .05s,transform .7s ease .05s,background .4s ease;background:#FBF9F4;padding:clamp(30px,3vw,48px)" style-hover="background:#fff">
+          <div style="font-family:'Newsreader',serif;font-size:20px;color:#E0231C;margin-bottom:20px">08</div>
+          <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:26px;margin:0 0 14px">Additional Needs</h3>
+          <p style="font-size:15px;line-height:1.65;color:#5A5349;margin:0">We meet special HR needs of corporates and professionals, met by a committed team of panel advisors and consultants.</p>
+        </div>
+
+      </div>
+
+      <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease;margin-top:clamp(44px,5vw,72px);background:#18140F;color:#FBF9F4;padding:clamp(36px,4vw,60px);display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;border-radius:3px">
+        <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(24px,2.6vw,38px);line-height:1.1;margin:0;max-width:22ch">Have a role you cannot afford to get wrong?</h2>
+        <a href="#" data-pp-goto="contact" data-pp-settab="employer" style="text-decoration:none;background:#E0231C;color:#fff;font-size:15px;font-weight:600;padding:15px 30px;border-radius:2px;transition:background .3s,transform .3s;white-space:nowrap" style-hover="background:#fff;color:#18140F;transform:translateY(-2px)">Share your mandate →</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================================================== CLIENTS ==================================================== -->
+  <div data-pp-page="clients" data-screen-label="Clients" style="display:none">
+    <section style="max-width:1280px;margin:0 auto;padding:clamp(48px,6vw,90px) clamp(20px,4vw,52px) clamp(34px,4vw,54px)">
+      <div data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease;display:flex;flex-wrap:wrap;gap:30px;align-items:flex-end;justify-content:space-between">
+        <div>
+          <div style="font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#E0231C;margin-bottom:24px">Our clients</div>
+          <h1 style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(30px,4.4vw,76px);line-height:1.0;letter-spacing:-0.02em;margin:0;white-space:nowrap">The company we keep.</h1>
+        </div>
+        <p style="font-size:16px;line-height:1.6;color:#5A5349;max-width:40ch;margin:0">A selection of the organisations who have trusted us with their leadership over the past few years — across conglomerates, MNCs and high-growth challengers.</p>
+      </div>
+    </section>
+
+    <!-- CAROUSEL -->
+    <section style="padding:clamp(8px,1vw,16px) 0 clamp(40px,4vw,64px)">
+      <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease;max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,52px)">
+        <div style="display:flex;justify-content:flex-end;gap:10px;margin-bottom:18px">
+          <button data-pp-prev aria-label="Previous" style="width:46px;height:46px;border-radius:50%;border:1px solid #C9C2B4;background:transparent;color:#18140F;font-size:18px;cursor:pointer;transition:.3s" style-hover="background:#18140F;color:#fff;border-color:#18140F">←</button>
+          <button data-pp-next aria-label="Next" style="width:46px;height:46px;border-radius:50%;border:1px solid #C9C2B4;background:transparent;color:#18140F;font-size:18px;cursor:pointer;transition:.3s" style-hover="background:#18140F;color:#fff;border-color:#18140F">→</button>
+        </div>
+        <div style="overflow:hidden">
+          <div data-pp-track style="display:flex;gap:18px;transition:transform .6s cubic-bezier(.22,.61,.36,1);will-change:transform">
+            <div style="flex:none;width:240px;height:150px;background:#fff;border:1px solid #ECE7DC;display:flex;align-items:center;justify-content:center;padding:30px"><img src="assets/logos/reliance.png" alt="Reliance" style="max-height:50px;max-width:160px;width:auto"/></div>
+            <div style="flex:none;width:240px;height:150px;background:#fff;border:1px solid #ECE7DC;display:flex;align-items:center;justify-content:center;padding:30px"><img src="assets/logos/honeywell.png" alt="Honeywell" style="max-height:34px;max-width:160px;width:auto"/></div>
+            <div style="flex:none;width:240px;height:150px;background:#fff;border:1px solid #ECE7DC;display:flex;align-items:center;justify-content:center;padding:30px"><img src="assets/logos/caterpillar.png" alt="Caterpillar" style="max-height:30px;max-width:170px;width:auto"/></div>
+            <div style="flex:none;width:240px;height:150px;background:#fff;border:1px solid #ECE7DC;display:flex;align-items:center;justify-content:center;padding:30px"><img src="assets/logos/bayer.png" alt="Bayer" style="max-height:80px;max-width:120px;width:auto"/></div>
+            <div style="flex:none;width:240px;height:150px;background:#fff;border:1px solid #ECE7DC;display:flex;align-items:center;justify-content:center;padding:30px"><img src="assets/logos/ibm.png" alt="IBM" style="max-height:42px;max-width:150px;width:auto"/></div>
+            <div style="flex:none;width:240px;height:150px;background:#fff;border:1px solid #ECE7DC;display:flex;align-items:center;justify-content:center;padding:30px"><img src="assets/logos/novartis.png" alt="Novartis" style="max-height:46px;max-width:170px;width:auto"/></div>
+            <div style="flex:none;width:240px;height:150px;background:#fff;border:1px solid #ECE7DC;display:flex;align-items:center;justify-content:center;padding:30px"><img src="assets/logos/murugappa.png" alt="Murugappa" style="max-height:66px;max-width:150px;width:auto"/></div>
+            <div style="flex:none;width:240px;height:150px;background:#fff;border:1px solid #ECE7DC;display:flex;align-items:center;justify-content:center;padding:30px"><img src="assets/logos/gmr.png" alt="GMR" style="max-height:56px;max-width:150px;width:auto"/></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL WALL -->
+    <section style="border-top:1px solid #E6E0D4;background:#F6F3EC">
+      <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,5vw,80px) clamp(20px,4vw,52px)">
+        <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease;font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#8A8275;margin-bottom:30px">A few of the names we have worked with</div>
+        <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease;display:flex;flex-wrap:wrap;justify-content:center;gap:1px">
+          <div style="flex:0 0 160px;min-width:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:30px;min-height:128px;filter:grayscale(1);opacity:.62;box-shadow:0 0 0 1px #E6E0D4;transition:filter .4s,opacity .4s,box-shadow .4s" style-hover="filter:grayscale(0);opacity:1;box-shadow:0 0 0 1px #E6E0D4,0 14px 32px rgba(0,0,0,.08)"><img src="assets/logos/reliance.png" alt="Reliance" style="max-height:46px;max-width:140px;width:auto"/></div>
+          <div style="flex:0 0 160px;min-width:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:30px;min-height:128px;filter:grayscale(1);opacity:.62;box-shadow:0 0 0 1px #E6E0D4;transition:filter .4s,opacity .4s,box-shadow .4s" style-hover="filter:grayscale(0);opacity:1;box-shadow:0 0 0 1px #E6E0D4,0 14px 32px rgba(0,0,0,.08)"><img src="assets/logos/vedanta.png" alt="Vedanta" style="max-height:42px;max-width:140px;width:auto"/></div>
+          <div style="flex:0 0 160px;min-width:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:30px;min-height:128px;filter:grayscale(1);opacity:.62;box-shadow:0 0 0 1px #E6E0D4;transition:filter .4s,opacity .4s,box-shadow .4s" style-hover="filter:grayscale(0);opacity:1;box-shadow:0 0 0 1px #E6E0D4,0 14px 32px rgba(0,0,0,.08)"><img src="assets/logos/srf.png" alt="SRF" style="max-height:54px;max-width:130px;width:auto"/></div>
+          <div style="flex:0 0 160px;min-width:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:30px;min-height:128px;filter:grayscale(1);opacity:.62;box-shadow:0 0 0 1px #E6E0D4;transition:filter .4s,opacity .4s,box-shadow .4s" style-hover="filter:grayscale(0);opacity:1;box-shadow:0 0 0 1px #E6E0D4,0 14px 32px rgba(0,0,0,.08)"><img src="assets/logos/honeywell.png" alt="Honeywell" style="max-height:26px;max-width:140px;width:auto"/></div>
+          <div style="flex:0 0 160px;min-width:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:30px;min-height:128px;filter:grayscale(1);opacity:.62;box-shadow:0 0 0 1px #E6E0D4;transition:filter .4s,opacity .4s,box-shadow .4s" style-hover="filter:grayscale(0);opacity:1;box-shadow:0 0 0 1px #E6E0D4,0 14px 32px rgba(0,0,0,.08)"><img src="assets/logos/kotak.png" alt="Kotak Neo" style="max-height:34px;max-width:140px;width:auto"/></div>
+          <div style="flex:0 0 160px;min-width:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:30px;min-height:128px;filter:grayscale(1);opacity:.62;box-shadow:0 0 0 1px #E6E0D4;transition:filter .4s,opacity .4s,box-shadow .4s" style-hover="filter:grayscale(0);opacity:1;box-shadow:0 0 0 1px #E6E0D4,0 14px 32px rgba(0,0,0,.08)"><img src="assets/logos/murugappa.png" alt="Murugappa" style="max-height:60px;max-width:140px;width:auto"/></div>
+          <div style="flex:0 0 160px;min-width:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:30px;min-height:128px;filter:grayscale(1);opacity:.62;box-shadow:0 0 0 1px #E6E0D4;transition:filter .4s,opacity .4s,box-shadow .4s" style-hover="filter:grayscale(0);opacity:1;box-shadow:0 0 0 1px #E6E0D4,0 14px 32px rgba(0,0,0,.08)"><img src="assets/logos/iifl.png" alt="IIFL Capital" style="max-height:48px;max-width:140px;width:auto"/></div>
+          <div style="flex:0 0 160px;min-width:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:30px;min-height:128px;filter:grayscale(1);opacity:.62;box-shadow:0 0 0 1px #E6E0D4;transition:filter .4s,opacity .4s,box-shadow .4s" style-hover="filter:grayscale(0);opacity:1;box-shadow:0 0 0 1px #E6E0D4,0 14px 32px rgba(0,0,0,.08)"><img src="assets/logos/hdfcergo.png" alt="HDFC Ergo" style="max-height:54px;max-width:120px;width:auto"/></div>
+          <div style="flex:0 0 160px;min-width:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:30px;min-height:128px;filter:grayscale(1);opacity:.62;box-shadow:0 0 0 1px #E6E0D4;transition:filter .4s,opacity .4s,box-shadow .4s" style-hover="filter:grayscale(0);opacity:1;box-shadow:0 0 0 1px #E6E0D4,0 14px 32px rgba(0,0,0,.08)"><img src="assets/logos/polyplex.png" alt="Polyplex" style="max-height:30px;max-width:150px;width:auto"/></div>
+          <div style="flex:0 0 160px;min-width:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:30px;min-height:128px;filter:grayscale(1);opacity:.62;box-shadow:0 0 0 1px #E6E0D4;transition:filter .4s,opacity .4s,box-shadow .4s" style-hover="filter:grayscale(0);opacity:1;box-shadow:0 0 0 1px #E6E0D4,0 14px 32px rgba(0,0,0,.08)"><img src="assets/logos/omega.png" alt="Omega Healthcare" style="max-height:50px;max-width:150px;width:auto"/></div>
+          <div style="flex:0 0 160px;min-width:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:30px;min-height:128px;filter:grayscale(1);opacity:.62;box-shadow:0 0 0 1px #E6E0D4;transition:filter .4s,opacity .4s,box-shadow .4s" style-hover="filter:grayscale(0);opacity:1;box-shadow:0 0 0 1px #E6E0D4,0 14px 32px rgba(0,0,0,.08)"><img src="assets/logos/sanmar.png" alt="Sanmar Group" style="max-height:42px;max-width:150px;width:auto"/></div>
+          <div style="flex:0 0 160px;min-width:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:30px;min-height:128px;filter:grayscale(1);opacity:.62;box-shadow:0 0 0 1px #E6E0D4;transition:filter .4s,opacity .4s,box-shadow .4s" style-hover="filter:grayscale(0);opacity:1;box-shadow:0 0 0 1px #E6E0D4,0 14px 32px rgba(0,0,0,.08)"><img src="assets/logos/gmr.png" alt="GMR" style="max-height:56px;max-width:130px;width:auto"/></div>
+          <div style="flex:0 0 160px;min-width:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:30px;min-height:128px;filter:grayscale(1);opacity:.62;box-shadow:0 0 0 1px #E6E0D4;transition:filter .4s,opacity .4s,box-shadow .4s" style-hover="filter:grayscale(0);opacity:1;box-shadow:0 0 0 1px #E6E0D4,0 14px 32px rgba(0,0,0,.08)"><img src="assets/logos/caterpillar.png" alt="Caterpillar" style="max-height:26px;max-width:160px;width:auto"/></div>
+          <div style="flex:0 0 160px;min-width:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:30px;min-height:128px;filter:grayscale(1);opacity:.62;box-shadow:0 0 0 1px #E6E0D4;transition:filter .4s,opacity .4s,box-shadow .4s" style-hover="filter:grayscale(0);opacity:1;box-shadow:0 0 0 1px #E6E0D4,0 14px 32px rgba(0,0,0,.08)"><img src="assets/logos/novartis.png" alt="Novartis" style="max-height:42px;max-width:150px;width:auto"/></div>
+          <div style="flex:0 0 160px;min-width:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:30px;min-height:128px;filter:grayscale(1);opacity:.62;box-shadow:0 0 0 1px #E6E0D4;transition:filter .4s,opacity .4s,box-shadow .4s" style-hover="filter:grayscale(0);opacity:1;box-shadow:0 0 0 1px #E6E0D4,0 14px 32px rgba(0,0,0,.08)"><img src="assets/logos/adityabirla.png" alt="Aditya Birla Group" style="max-height:54px;max-width:140px;width:auto"/></div>
+          <div style="flex:0 0 160px;min-width:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:30px;min-height:128px;filter:grayscale(1);opacity:.62;box-shadow:0 0 0 1px #E6E0D4;transition:filter .4s,opacity .4s,box-shadow .4s" style-hover="filter:grayscale(0);opacity:1;box-shadow:0 0 0 1px #E6E0D4,0 14px 32px rgba(0,0,0,.08)"><img src="assets/logos/bayer.png" alt="Bayer" style="max-height:88px;max-width:110px;width:auto"/></div>
+          <div style="flex:0 0 160px;min-width:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:30px;min-height:128px;filter:grayscale(1);opacity:.62;box-shadow:0 0 0 1px #E6E0D4;transition:filter .4s,opacity .4s,box-shadow .4s" style-hover="filter:grayscale(0);opacity:1;box-shadow:0 0 0 1px #E6E0D4,0 14px 32px rgba(0,0,0,.08)"><img src="assets/logos/ibm.png" alt="IBM" style="max-height:38px;max-width:130px;width:auto"/></div>
+          <div style="flex:0 0 160px;min-width:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:30px;min-height:128px;filter:grayscale(1);opacity:.62;box-shadow:0 0 0 1px #E6E0D4;transition:filter .4s,opacity .4s,box-shadow .4s" style-hover="filter:grayscale(0);opacity:1;box-shadow:0 0 0 1px #E6E0D4,0 14px 32px rgba(0,0,0,.08)"><img src="assets/logos/religare.png" alt="Religare" style="max-height:42px;max-width:150px;width:auto"/></div>
+          <div style="flex:0 0 160px;min-width:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:30px;min-height:128px;filter:grayscale(1);opacity:.62;box-shadow:0 0 0 1px #E6E0D4;transition:filter .4s,opacity .4s,box-shadow .4s" style-hover="filter:grayscale(0);opacity:1;box-shadow:0 0 0 1px #E6E0D4,0 14px 32px rgba(0,0,0,.08)"><img src="assets/logos/hdfcsec.png" alt="HDFC Securities" style="max-height:42px;max-width:150px;width:auto"/></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RETENTION STATS -->
+    <section style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,110px) clamp(20px,4vw,52px)">
+      <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease;text-align:center">
+        <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(26px,3.2vw,46px);line-height:1.1;margin:0 auto 14px;max-width:24ch">Relationships, not transactions.</h2>
+        <div style="margin-top:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(28px,4vw,52px);text-align:left">
+          <div style="border-top:2px solid #E0231C;padding-top:22px">
+            <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(20px,2vw,25px);line-height:1.25;color:#18140F;margin:0 0 12px">Most of our clients have been with us</h3>
+            <p style="font-size:15.5px;line-height:1.65;color:#5A5349;margin:0">for over a decade (long-term retained relationships). The proof of good hiring is how long it lasts.</p>
+          </div>
+          <div style="border-top:2px solid #E0231C;padding-top:22px">
+            <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(20px,2vw,25px);line-height:1.25;color:#18140F;margin:0 0 12px">Three Cities, One National Network</h3>
+            <p style="font-size:15.5px;line-height:1.65;color:#5A5349;margin:0">Based in Delhi, Mumbai and Chennai — with collaborators across every major city for Pan-India searches.</p>
+          </div>
+          <div style="border-top:2px solid #E0231C;padding-top:22px">
+            <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(20px,2vw,25px);line-height:1.25;color:#18140F;margin:0 0 12px">Sustained Client Relationships</h3>
+            <p style="font-size:15.5px;line-height:1.65;color:#5A5349;margin:0">Many retained clients continue with us for a decade or longer — relationships built on trust, not transactions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================================================== CONTACT ==================================================== -->
+  <div data-pp-page="contact" data-screen-label="Contact" style="display:none">
+    <section style="max-width:1280px;margin:0 auto;padding:clamp(48px,6vw,90px) clamp(20px,4vw,52px) clamp(20px,3vw,40px)">
+      <div data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease">
+        <div style="font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#E0231C;margin-bottom:24px">Contact us</div>
+        <h1 style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(36px,5.2vw,78px);line-height:1.0;letter-spacing:-0.02em;margin:0;max-width:16ch">Let's begin a <span style="font-style:italic">conversation.</span></h1>
+      </div>
+    </section>
+
+    <section style="max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,52px) clamp(40px,5vw,72px)">
+      <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease;display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(40px,5vw,80px);align-items:start" data-pp-grid>
+
+        <!-- FORM SIDE -->
+        <div>
+          <!-- toggle -->
+          <div style="display:inline-flex;background:#EFEBE1;border-radius:3px;padding:4px;margin-bottom:36px;gap:4px">
+            <button data-pp-tab="employer" style="border:none;cursor:pointer;background:#18140F;color:#fff;font-size:14px;font-weight:600;padding:11px 22px;border-radius:2px;transition:.3s">I'm hiring</button>
+            <button data-pp-tab="candidate" style="border:none;cursor:pointer;background:transparent;color:#18140F;font-size:14px;font-weight:600;padding:11px 22px;border-radius:2px;transition:.3s">I'm a candidate</button>
+          </div>
+
+          <!-- EMPLOYER FORM -->
+          <form data-pp-form="employer" data-pp-formel style="display:block">
+            <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:26px;margin:0 0 6px">Share your leadership mandate</h2>
+            <p style="font-size:15px;color:#5A5349;margin:0 0 30px;line-height:1.6">Tell us the role. A Managing Partner — your single point of contact — will respond personally.</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px 28px">
+              <label style="display:block"><span style="display:block;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8A8275;margin-bottom:8px">Full name *</span><input required style="width:100%;border:none;border-bottom:1px solid #D8D2C5;background:transparent;padding:11px 0;font-size:16px;color:#18140F;outline:none;transition:border-color .3s" style-focus="border-bottom-color:#E0231C"/></label>
+              <label style="display:block"><span style="display:block;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8A8275;margin-bottom:8px">Company email *</span><input required type="email" style="width:100%;border:none;border-bottom:1px solid #D8D2C5;background:transparent;padding:11px 0;font-size:16px;color:#18140F;outline:none;transition:border-color .3s" style-focus="border-bottom-color:#E0231C"/></label>
+              <label style="display:block"><span style="display:block;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8A8275;margin-bottom:8px">Phone number *</span><input required style="width:100%;border:none;border-bottom:1px solid #D8D2C5;background:transparent;padding:11px 0;font-size:16px;color:#18140F;outline:none;transition:border-color .3s" style-focus="border-bottom-color:#E0231C"/></label>
+              <label style="display:block"><span style="display:block;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8A8275;margin-bottom:8px">Company name *</span><input required style="width:100%;border:none;border-bottom:1px solid #D8D2C5;background:transparent;padding:11px 0;font-size:16px;color:#18140F;outline:none;transition:border-color .3s" style-focus="border-bottom-color:#E0231C"/></label>
+              <label style="display:block"><span style="display:block;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8A8275;margin-bottom:8px">Your designation *</span><input required style="width:100%;border:none;border-bottom:1px solid #D8D2C5;background:transparent;padding:11px 0;font-size:16px;color:#18140F;outline:none;transition:border-color .3s" style-focus="border-bottom-color:#E0231C"/></label>
+              <label style="display:block"><span style="display:block;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8A8275;margin-bottom:8px">Position to fill *</span><input required style="width:100%;border:none;border-bottom:1px solid #D8D2C5;background:transparent;padding:11px 0;font-size:16px;color:#18140F;outline:none;transition:border-color .3s" style-focus="border-bottom-color:#E0231C"/></label>
+              <label style="display:block;grid-column:1/-1"><span style="display:block;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8A8275;margin-bottom:8px">No. of employees in the organisation *</span><input required style="width:100%;border:none;border-bottom:1px solid #D8D2C5;background:transparent;padding:11px 0;font-size:16px;color:#18140F;outline:none;transition:border-color .3s" style-focus="border-bottom-color:#E0231C"/></label>
+              <label style="display:block;grid-column:1/-1"><span style="display:block;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8A8275;margin-bottom:8px">Anything else you'd like to share</span><textarea rows="3" style="width:100%;border:none;border-bottom:1px solid #D8D2C5;background:transparent;padding:11px 0;font-size:16px;color:#18140F;outline:none;resize:vertical;transition:border-color .3s" style-focus="border-bottom-color:#E0231C"></textarea></label>
+            </div>
+            <button data-submit type="submit" style="margin-top:34px;background:#E0231C;color:#fff;border:none;cursor:pointer;font-size:15px;font-weight:600;padding:16px 40px;border-radius:2px;transition:.3s" style-hover="background:#18140F">Submit mandate</button>
+          </form>
+
+          <!-- CANDIDATE FORM -->
+          <form data-pp-form="candidate" data-pp-formel style="display:none">
+            <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:26px;margin:0 0 6px">Submit your résumé</h2>
+            <p style="font-size:15px;color:#5A5349;margin:0 0 30px;line-height:1.6">For senior leaders exploring their next chapter. We treat every conversation in confidence.</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px 28px">
+              <label style="display:block"><span style="display:block;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8A8275;margin-bottom:8px">First name *</span><input required style="width:100%;border:none;border-bottom:1px solid #D8D2C5;background:transparent;padding:11px 0;font-size:16px;color:#18140F;outline:none;transition:border-color .3s" style-focus="border-bottom-color:#E0231C"/></label>
+              <label style="display:block"><span style="display:block;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8A8275;margin-bottom:8px">Last name *</span><input required style="width:100%;border:none;border-bottom:1px solid #D8D2C5;background:transparent;padding:11px 0;font-size:16px;color:#18140F;outline:none;transition:border-color .3s" style-focus="border-bottom-color:#E0231C"/></label>
+              <label style="display:block"><span style="display:block;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8A8275;margin-bottom:8px">Company *</span><input required style="width:100%;border:none;border-bottom:1px solid #D8D2C5;background:transparent;padding:11px 0;font-size:16px;color:#18140F;outline:none;transition:border-color .3s" style-focus="border-bottom-color:#E0231C"/></label>
+              <label style="display:block"><span style="display:block;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8A8275;margin-bottom:8px">Work email *</span><input required type="email" style="width:100%;border:none;border-bottom:1px solid #D8D2C5;background:transparent;padding:11px 0;font-size:16px;color:#18140F;outline:none;transition:border-color .3s" style-focus="border-bottom-color:#E0231C"/></label>
+              <label style="display:block"><span style="display:block;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8A8275;margin-bottom:8px">Business phone *</span><input required style="width:100%;border:none;border-bottom:1px solid #D8D2C5;background:transparent;padding:11px 0;font-size:16px;color:#18140F;outline:none;transition:border-color .3s" style-focus="border-bottom-color:#E0231C"/></label>
+              <label style="display:block"><span style="display:block;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8A8275;margin-bottom:8px">Job title *</span><input required style="width:100%;border:none;border-bottom:1px solid #D8D2C5;background:transparent;padding:11px 0;font-size:16px;color:#18140F;outline:none;transition:border-color .3s" style-focus="border-bottom-color:#E0231C"/></label>
+              <label style="display:block;grid-column:1/-1"><span style="display:block;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8A8275;margin-bottom:8px">What are you looking for? *</span><input required style="width:100%;border:none;border-bottom:1px solid #D8D2C5;background:transparent;padding:11px 0;font-size:16px;color:#18140F;outline:none;transition:border-color .3s" style-focus="border-bottom-color:#E0231C"/></label>
+              <label style="display:block;grid-column:1/-1;cursor:pointer"><span style="display:block;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8A8275;margin-bottom:8px">Attach CV</span><span style="display:flex;align-items:center;gap:14px;border:1px dashed #C9C2B4;border-radius:3px;padding:18px 20px;font-size:14.5px;color:#5A5349;transition:.3s" style-hover="border-color:#E0231C;color:#18140F"><span style="font-size:20px;color:#E0231C">↑</span> Drag a file here or click to browse — PDF or Word</span><input type="file" style="display:none"/></label>
+            </div>
+            <button data-submit type="submit" style="margin-top:34px;background:#E0231C;color:#fff;border:none;cursor:pointer;font-size:15px;font-weight:600;padding:16px 40px;border-radius:2px;transition:.3s" style-hover="background:#18140F">Submit résumé</button>
+          </form>
+        </div>
+
+        <!-- OFFICES SIDE -->
+        <aside style="background:#18140F;color:#FBF9F4;padding:clamp(30px,3vw,44px);border-radius:3px;align-self:stretch">
+          <div style="font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#E0231C;margin-bottom:30px">Contact Address Office</div>
+          <div style="margin-bottom:30px">
+            <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:22px;margin:0 0 10px">Delhi</h3>
+            <p style="font-size:14.5px;line-height:1.7;color:#C8C2B6;margin:0"><a href="mailto:pgganehs@perfectplacer.in" style="color:#FBF9F4;text-decoration:none;border-bottom:1px solid rgba(224,35,28,.6)">pgganehs@perfectplacer.in</a><br>Mobile: +91 8368 469 496</p>
+          </div>
+          <div style="margin-bottom:30px;padding-top:26px;border-top:1px solid rgba(255,255,255,.12)">
+            <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:22px;margin:0 0 10px">Mumbai</h3>
+            <p style="font-size:14.5px;line-height:1.7;color:#C8C2B6;margin:0"><a href="mailto:krishnan@perfectplacer.in" style="color:#FBF9F4;text-decoration:none;border-bottom:1px solid rgba(224,35,28,.6)">krishnan@perfectplacer.in</a><br>Mobile: +91 8657 606 116</p>
+          </div>
+          <div style="padding-top:26px;border-top:1px solid rgba(255,255,255,.12)">
+            <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:22px;margin:0 0 10px">Chennai</h3>
+            <p style="font-size:14.5px;line-height:1.7;color:#C8C2B6;margin:0"><a href="mailto:chennai@perfectplacer.in" style="color:#FBF9F4;text-decoration:none;border-bottom:1px solid rgba(224,35,28,.6)">chennai@perfectplacer.in</a><br>Phone: 044 4853 9238</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </div>
+
+  </div><!-- /padding wrap -->
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background:#100D0A;color:#C8C2B6">
+    <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,5vw,80px) clamp(20px,4vw,52px) clamp(28px,3vw,40px);display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:clamp(30px,4vw,56px)">
+      <div>
+        <img src="assets/perfectplacer-logo.png" alt="Perfect Placer" style="height:58px;width:auto;filter:brightness(0) invert(1);margin-bottom:22px"/>
+        <p style="font-family:'Newsreader',serif;font-style:italic;font-weight:300;font-size:21px;line-height:1.4;color:#FBF9F4;margin:0;max-width:24ch">Empowering ambition, connecting talent — since 1992.</p>
+      </div>
+      <div>
+        <div style="font-size:11.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#7A746A;margin-bottom:20px">Explore</div>
+        <div style="display:flex;flex-direction:column;gap:13px">
+          <a href="#" data-pp-goto="home" style="text-decoration:none;color:#C8C2B6;font-size:15px;transition:color .3s" style-hover="color:#fff">Home</a>
+          <a href="#" data-pp-goto="about" style="text-decoration:none;color:#C8C2B6;font-size:15px;transition:color .3s" style-hover="color:#fff">About Us</a>
+          <a href="#" data-pp-goto="why" style="text-decoration:none;color:#C8C2B6;font-size:15px;transition:color .3s" style-hover="color:#fff">Why Choose Us</a>
+          <a href="#" data-pp-goto="clients" style="text-decoration:none;color:#C8C2B6;font-size:15px;transition:color .3s" style-hover="color:#fff">Our Clients</a>
+          <a href="#" data-pp-goto="contact" style="text-decoration:none;color:#C8C2B6;font-size:15px;transition:color .3s" style-hover="color:#fff">Contact Us</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#7A746A;margin-bottom:20px">Reach us</div>
+        <p style="font-size:14.5px;line-height:1.8;color:#C8C2B6;margin:0">Delhi · Mumbai · Chennai<br><a href="mailto:info@perfectplacer.in" style="color:#fff;text-decoration:none;border-bottom:1px solid rgba(224,35,28,.6)">info@perfectplacer.in</a><br>+91 8368 469 496</p>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.1)">
+      <div style="max-width:1280px;margin:0 auto;padding:22px clamp(20px,4vw,52px);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:13px;color:#7A746A">
+        <span>© 2026 Perfect Placer. All rights reserved.</span>
+        <span>HR Consulting · Recruitment · Training &amp; Mentoring</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+  componentDidMount() {
+    const root = document.querySelector('[data-pp-root]') || document;
+    const q = (s) => Array.from(root.querySelectorAll(s));
+
+    // ---- reveal on scroll ----
+    const reveal = (el) => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { reveal(e.target); io.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+    q('[data-reveal]').forEach((el) => io.observe(el));
+
+    // ---- routing ----
+    const pages = q('[data-pp-page]');
+    const links = q('[data-pp-link]');
+    const setActive = (name) => {
+      links.forEach((l) => {
+        const on = l.getAttribute('data-pp-link') === name;
+        l.style.color = on ? '#E0231C' : '#18140F';
+        const ul = l.querySelector('[data-ul]');
+        if (ul) ul.style.width = on ? '100%' : '0';
+      });
+    };
+    const go = (name) => {
+      pages.forEach((p) => { p.style.display = p.getAttribute('data-pp-page') === name ? 'block' : 'none'; });
+      setActive(name);
+      try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) { window.scrollTo(0, 0); }
+      const cur = pages.find((p) => p.getAttribute('data-pp-page') === name);
+      if (cur) cur.querySelectorAll('[data-reveal]').forEach((el, i) => { setTimeout(() => reveal(el), 60 + i * 55); });
+    };
+    q('[data-pp-link],[data-pp-goto]').forEach((a) => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const name = a.getAttribute('data-pp-link') || a.getAttribute('data-pp-goto');
+        go(name);
+        const tab = a.getAttribute('data-pp-settab');
+        if (tab) { const t = root.querySelector('[data-pp-tab="' + tab + '"]'); if (t) t.click(); }
+      });
+    });
+    setActive('home');
+
+    // ---- contact form toggle ----
+    const tabs = q('[data-pp-tab]');
+    const forms = q('[data-pp-form]');
+    tabs.forEach((t) => t.addEventListener('click', () => {
+      const k = t.getAttribute('data-pp-tab');
+      tabs.forEach((x) => {
+        const on = x.getAttribute('data-pp-tab') === k;
+        x.style.background = on ? '#18140F' : 'transparent';
+        x.style.color = on ? '#fff' : '#18140F';
+      });
+      forms.forEach((f) => { f.style.display = f.getAttribute('data-pp-form') === k ? 'block' : 'none'; });
+    }));
+
+    // ---- form submit ----
+    q('form[data-pp-formel]').forEach((f) => f.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = f.querySelector('[data-submit]');
+      if (btn) { btn.textContent = "Thank you — we'll be in touch shortly"; btn.style.background = '#1F7A44'; btn.style.pointerEvents = 'none'; }
+    }));
+
+    // ---- clients carousel ----
+    const track = root.querySelector('[data-pp-track]');
+    if (track) {
+      let off = 0;
+      const step = 258 * 2;
+      const maxOff = () => Math.max(0, track.scrollWidth - track.parentElement.offsetWidth);
+      const apply = () => { track.style.transform = 'translateX(-' + off + 'px)'; };
+      const next = root.querySelector('[data-pp-next]');
+      const prev = root.querySelector('[data-pp-prev]');
+      if (next) next.addEventListener('click', () => { off = Math.min(maxOff(), off + step); apply(); });
+      if (prev) prev.addEventListener('click', () => { off = Math.max(0, off - step); apply(); });
+    }
+
+    // ---- nav scroll shadow ----
+    const nav = root.querySelector('[data-pp-nav]');
+    if (nav) {
+      const onScroll = () => {
+        if (window.scrollY > 8) { nav.style.boxShadow = '0 6px 24px rgba(0,0,0,0.06)'; nav.style.background = 'rgba(251,249,244,0.86)'; }
+        else { nav.style.boxShadow = '0 1px 0 #E6E0D4'; nav.style.background = 'rgba(251,249,244,0.92)'; }
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+    }
+  }
+}
+</script>
+</body>
+</html>
