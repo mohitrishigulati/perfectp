@@ -128,6 +128,36 @@
     .pp-nav [data-ul]{display:none}
   }
 
+  /* ---- Card / logo grids: fixed column counts so leftover tracks
+         don't show as empty grey cells on incomplete last rows. ---- */
+  .pp-grid-3{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:1px;
+    background:#E6E0D4;
+    border:1px solid #E6E0D4;
+  }
+  .pp-grid-logos{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:1px;
+    background:rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.1);
+  }
+  .pp-grid-why{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:1px;
+    background:#E6E0D4;
+    border:1px solid #E6E0D4;
+  }
+  @media (max-width:900px){
+    .pp-grid-why{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+  @media (max-width:700px){
+    .pp-grid-3,.pp-grid-logos,.pp-grid-why{grid-template-columns:1fr}
+  }
+
   /* ---- Responsive grids.
          These four were hard-coded column counts with no breakpoints. ---- */
   @media (max-width:900px){
@@ -235,7 +265,7 @@
         <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(30px,3.6vw,50px);line-height:1.05;letter-spacing:-0.015em;margin:0;max-width:18ch">What we do, we do for the few roles that matter most.</h2>
         <a href="#/why" data-pp-goto="why" style="text-decoration:none;color:#18140F;font-weight:600;font-size:15px;border-bottom:1.5px solid #E0231C;padding-bottom:3px;white-space:nowrap">Why choose us →</a>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:#E6E0D4;border:1px solid #E6E0D4">
+      <div class="pp-grid-3">
         <div class="pp-card" data-reveal style="opacity:0;transform:translateY(20px);background:#FBF9F4;padding:clamp(28px,3vw,44px);transition:opacity .8s ease,transform .8s ease,background .4s ease">
           <div style="font-family:'Newsreader',serif;font-size:22px;color:#E0231C;margin-bottom:18px">01</div>
           <h3 style="font-family:'Newsreader',serif;font-weight:400;font-size:25px;margin:0 0 12px">Executive Search</h3>
@@ -264,7 +294,7 @@
           </div>
           <a href="#/clients" data-pp-goto="clients" style="text-decoration:none;color:#FBF9F4;font-weight:600;font-size:15px;border-bottom:1.5px solid #E0231C;padding-bottom:3px;white-space:nowrap">See our clients →</a>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.1)">
+        <div class="pp-grid-logos">
           <div style="background:#18140F;display:flex;align-items:center;justify-content:center;padding:30px 22px"><img src="assets/logos/reliance.png" alt="Reliance" loading="lazy" style="max-height:34px;max-width:120px;width:auto;filter:brightness(0) invert(1);opacity:.78"/></div>
           <div style="background:#18140F;display:flex;align-items:center;justify-content:center;padding:30px 22px"><img src="assets/logos/honeywell.png" alt="Honeywell" loading="lazy" style="max-height:26px;max-width:120px;width:auto;filter:brightness(0) invert(1);opacity:.78"/></div>
           <div style="background:#18140F;display:flex;align-items:center;justify-content:center;padding:30px 22px"><img src="assets/logos/ibm.png" alt="IBM" loading="lazy" style="max-height:30px;max-width:110px;width:auto;filter:brightness(0) invert(1);opacity:.78"/></div>
@@ -321,20 +351,16 @@
 
     <!-- STATS + INDUSTRIES -->
     <section style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,110px) clamp(20px,4vw,52px)">
-      <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(36px,5vw,80px);align-items:center">
-        <div>
-          <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(28px,3.4vw,46px);line-height:1.08;margin:0;max-width:16ch">We are measured by what happens after the offer letter.</h2>
-        </div>
-        <div>
-          <div style="font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#8A8275;margin-bottom:20px">Leadership roles filled across</div>
-          <div style="display:flex;flex-wrap:wrap;gap:10px">
-            <span style="border:1px solid #D8D2C5;border-radius:40px;padding:9px 18px;font-size:14.5px;font-weight:500">Manufacturing</span>
-            <span style="border:1px solid #D8D2C5;border-radius:40px;padding:9px 18px;font-size:14.5px;font-weight:500">BFSI</span>
-            <span style="border:1px solid #D8D2C5;border-radius:40px;padding:9px 18px;font-size:14.5px;font-weight:500">Retail</span>
-            <span style="border:1px solid #D8D2C5;border-radius:40px;padding:9px 18px;font-size:14.5px;font-weight:500">Telecom</span>
-            <span style="border:1px solid #D8D2C5;border-radius:40px;padding:9px 18px;font-size:14.5px;font-weight:500">Pharma</span>
-            <span style="border:1px solid #D8D2C5;border-radius:40px;padding:9px 18px;font-size:14.5px;font-weight:500">Healthcare</span>
-          </div>
+      <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease">
+        <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(28px,3.4vw,46px);line-height:1.08;margin:0 0 clamp(36px,4vw,56px);max-width:16ch">We are measured by what happens after the offer letter.</h2>
+        <div style="font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#8A8275;margin-bottom:20px">Leadership roles filled across</div>
+        <div style="display:flex;flex-wrap:nowrap;gap:10px;overflow-x:auto;-webkit-overflow-scrolling:touch">
+          <span style="border:1px solid #D8D2C5;border-radius:40px;padding:9px 18px;font-size:14.5px;font-weight:500;white-space:nowrap;flex:none">Manufacturing</span>
+          <span style="border:1px solid #D8D2C5;border-radius:40px;padding:9px 18px;font-size:14.5px;font-weight:500;white-space:nowrap;flex:none">BFSI</span>
+          <span style="border:1px solid #D8D2C5;border-radius:40px;padding:9px 18px;font-size:14.5px;font-weight:500;white-space:nowrap;flex:none">Retail</span>
+          <span style="border:1px solid #D8D2C5;border-radius:40px;padding:9px 18px;font-size:14.5px;font-weight:500;white-space:nowrap;flex:none">Telecom</span>
+          <span style="border:1px solid #D8D2C5;border-radius:40px;padding:9px 18px;font-size:14.5px;font-weight:500;white-space:nowrap;flex:none">Pharma</span>
+          <span style="border:1px solid #D8D2C5;border-radius:40px;padding:9px 18px;font-size:14.5px;font-weight:500;white-space:nowrap;flex:none">Healthcare</span>
         </div>
       </div>
     </section>
@@ -351,7 +377,7 @@
     </section>
 
     <section style="max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,52px) clamp(64px,7vw,110px)">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:#E6E0D4;border:1px solid #E6E0D4">
+      <div class="pp-grid-why">
 
         <div class="pp-card" data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease,background .4s ease;background:#FBF9F4;padding:clamp(30px,3vw,48px)">
           <div style="font-family:'Newsreader',serif;font-size:20px;color:#E0231C;margin-bottom:20px">01</div>
