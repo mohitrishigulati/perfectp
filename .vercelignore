@@ -1,0 +1,13 @@
+Perfect Placer (standalone).html
+Perfect Placer.dc.html
+_pp_standalone_src.dc.html
+support.js
+image-slot.js
+.image-slots.state.json
+.thumbnail
+uploads/
+uploads/*.docx
+screenshots/
+README.md
+.claude/
+_tmp_slot_hero.bin

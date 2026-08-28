@@ -9,6 +9,7 @@ Desktop.ini
 .env.*
 *.pem
 credentials.json
+uploads/*.docx
 
 .vercel
 .env*

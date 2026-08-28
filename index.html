@@ -537,8 +537,9 @@
           </div>
 
           <!-- EMPLOYER FORM -->
-          <form data-pp-form="employer" data-pp-formel id="pp-form-employer" role="tabpanel" aria-labelledby="pp-tab-employer" method="post" novalidate style="display:block">
+          <form data-pp-form="employer" data-pp-formel id="pp-form-employer" role="tabpanel" aria-labelledby="pp-tab-employer" method="post" enctype="multipart/form-data" novalidate style="display:block">
             <input type="hidden" name="form_type" value="employer">
+            <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none">
             <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:26px;margin:0 0 6px">Share your leadership mandate</h2>
             <p style="font-size:15px;color:#5A5349;margin:0 0 30px;line-height:1.6">Tell us the role. A Managing Partner — your single point of contact — will respond personally.</p>
             <div data-grid="form" style="display:grid;grid-template-columns:1fr 1fr;gap:24px 28px">
@@ -558,6 +559,7 @@
           <!-- CANDIDATE FORM -->
           <form data-pp-form="candidate" data-pp-formel id="pp-form-candidate" role="tabpanel" aria-labelledby="pp-tab-candidate" method="post" enctype="multipart/form-data" novalidate style="display:none">
             <input type="hidden" name="form_type" value="candidate">
+            <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none">
             <h2 style="font-family:'Newsreader',serif;font-weight:400;font-size:26px;margin:0 0 6px">Submit your résumé</h2>
             <p style="font-size:15px;color:#5A5349;margin:0 0 30px;line-height:1.6">For senior leaders exploring their next chapter. We treat every conversation in confidence.</p>
             <div data-grid="form" style="display:grid;grid-template-columns:1fr 1fr;gap:24px 28px">
@@ -642,7 +644,8 @@
      (Formspree, Basin, Netlify Forms, your own /api/enquiry, …).
      Leave empty and the form shows a confirmation without sending.
      ============================================================ */
-  var FORM_ENDPOINT = '';
+  var FORM_ENDPOINT = 'https://formsubmit.co/ajax/info@perfectplacer.in';
+  var MAX_CV_BYTES = 5 * 1024 * 1024;
 
   var root = document.querySelector('[data-pp-root]') || document;
   var q = function (s) { return Array.prototype.slice.call(root.querySelectorAll(s)); };
@@ -801,6 +804,17 @@
         return;
       }
 
+      var honey = f.querySelector('input[name="_honey"]');
+      if (honey && honey.value) return;
+
+      if (f.getAttribute('data-pp-form') === 'candidate') {
+        var cvInput = f.querySelector('input[name="cv"]');
+        if (cvInput && cvInput.files && cvInput.files[0] && cvInput.files[0].size > MAX_CV_BYTES) {
+          say('CV must be 5 MB or smaller. Please choose a smaller file.', false);
+          return;
+        }
+      }
+
       var done = function () {
         if (btn) {
           btn.textContent = "Thank you — we'll be in touch shortly";
@@ -820,9 +834,16 @@
       }
 
       if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+      var data = new FormData(f);
+      data.append('_template', 'table');
+      data.append('_subject', f.getAttribute('data-pp-form') === 'candidate'
+        ? 'Perfect Placer website: candidate résumé'
+        : 'Perfect Placer website: employer mandate');
+      var emailField = f.querySelector('input[name="email"]');
+      if (emailField && emailField.value) data.append('_replyto', emailField.value);
       fetch(FORM_ENDPOINT, {
         method: 'POST',
-        body: new FormData(f),
+        body: data,
         headers: { Accept: 'application/json' }
       }).then(function (res) {
         if (!res.ok) throw new Error('HTTP ' + res.status);
